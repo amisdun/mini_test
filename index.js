@@ -5,9 +5,6 @@ const generateUpdateQuery = (data, table_name) => {
   const getJsonValues = Object.values(data);
   let updateString = "";
   for (idx in getJsonKeys) {
-    if (getJsonKeys[idx].toLowerCase() === "id") {
-      continue;
-    }
     updateString += `${getJsonKeys[idx]} = ${JSON.stringify(
       getJsonValues[idx]
     )}, `;
@@ -16,4 +13,4 @@ const generateUpdateQuery = (data, table_name) => {
   return updateQuery;
 };
 
-console.log(generateUpdateQuery(data, "users"));
+generateUpdateQuery(data, "users");
