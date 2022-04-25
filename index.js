@@ -13,4 +13,4 @@ const generateUpdateQuery = (data, table_name) => {
   return updateQuery;
 };
 
-generateUpdateQuery(data, "users");
+console.log(generateUpdateQuery(data, "users"));
